@@ -12,6 +12,7 @@ public class TorpedoStore {
   // rate of failing to fire torpedos [0.0, 1.0]
   private double FAILURE_RATE = 0.0; //NOSONAR
 
+  // for RNG features
   private Random generator = new Random();
 
   private int torpedoCount = 0;
@@ -32,6 +33,7 @@ public class TorpedoStore {
 
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
+      
       throw new IllegalArgumentException("numberOfTorpedos");
     }
 
